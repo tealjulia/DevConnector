@@ -33,3 +33,4 @@ mongoose
 
 //Passport configuration
 app.use(passport.initialize());
+require('./config/passport')(passport);
