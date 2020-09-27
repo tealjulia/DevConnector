@@ -10,7 +10,7 @@ const post = require('../../models/Post');
 const Profile = require('../../models/Profile');
 
 //validation
-const validatePostInput = require('../../validation/post');
+const validatePostInput = require('../../validation/posts');
 const { route } = require('./profile');
 
 // @route   GET api/posts

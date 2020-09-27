@@ -1,5 +1,3 @@
-//this builds the collection in the mongo db.  schema defines the max data, but some may not have all... defines a structure.
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -18,14 +16,13 @@ const UserSchema = new Schema({
     required: true
   },
   avatar: {
-    type: String,
+    type: String
   },
   date: {
     type: Date,
-    default: Date.now  
+    default: Date.now
   }
 });
 
-//hook the schema up to mongoose
-module.exports = User = mongoose.model('users', UserSchema);
 
+module.exports = User = mongoose.model('users', UserSchema);
