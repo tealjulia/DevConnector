@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {loginUser} from '../../actions/authActions';
 
+
 class Login extends Component {
   constructor() {
     super();
@@ -31,6 +32,12 @@ class Login extends Component {
     };
 
     this.props.loginUser(user);
+  }
+
+  componentDidMount(){
+    if(this.props.auth.isAuthenticated){
+      this.props.history.push('/dashboard');
+    }
   }
 
   componentWillReceiveProps(nextProps) {
